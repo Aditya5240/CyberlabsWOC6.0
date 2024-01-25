@@ -55,6 +55,8 @@ function searchMovies() {
                 localStorage.setItem('selectedMovieTitle', result.title);
                 localStorage.setItem('selectedMovieOverview', result.overview);
                 localStorage.setItem('selectedMoviePoster', moviePoster.src);
+                 localStorage.setItem('selectedMovieRating', result.vote_average );
+                localStorage.setItem('selectedMovieReleaseDate', result.release_date);
                 window.location.href = 'movie-details.html';
               };
           });
@@ -124,12 +126,7 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', fetchP
         const movieTitle = document.createElement('div');
         movieTitle.classList.add('movieTitle');
         movieTitle.innerText = alpha.title;
-
-        const movieRating = document.createElement('div');
-        movieRating.classList.add('movieRating');
-        movieRating.innerText = alpha.vote_average;
     
-
         movieGrid.appendChild(alpha);
 
         alpha.onclick = function(){
@@ -137,8 +134,8 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', fetchP
             localStorage.setItem('selectedMovieTitle', movie.title);
             localStorage.setItem('selectedMovieOverview', movie.overview);
             localStorage.setItem('selectedMoviePoster', moviePoster.src);
-            localStorage.getItem('selectedMovieReleaseDate',movie.release_date);
-            localStorage.getItem('selectedMovieVoteAverage', movie.vote_average);
+            localStorage.setItem('selectedMovieRating', movie.vote_average );
+            localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
             window.location.href = 'movie-details.html';
         };
         
@@ -197,7 +194,8 @@ fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', fetchP
             localStorage.setItem('selectedMovieTitle', movie.title);
             localStorage.setItem('selectedMovieOverview', movie.overview);
             localStorage.setItem('selectedMoviePoster', moviePoster.src);
-            localStorage.setItem('selectedMovieRating', movie.vote_average )
+            localStorage.setItem('selectedMovieRating', movie.vote_average );
+            localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
             window.location.href = 'movie-details.html';
          }
          
@@ -284,10 +282,8 @@ fetch('https://api.themoviedb.org/3/movie/upcoming?language=en-US&page=1', fetch
             localStorage.setItem('selectedMovieTitle', movie.title);
             localStorage.setItem('selectedMovieOverview', movie.overview);
             localStorage.setItem('selectedMoviePoster', moviePoster.src);
-            
-
-            localStorage.getItem('selectedMovieReleaseDate',movie.release_date);
-            localStorage.getItem('selectedMovieVoteAverage', movie.vote_average);
+            localStorage.setItem('selectedMovieRating', movie.vote_average );
+            localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
             window.location.href = 'movie-details.html';
         }
 
@@ -399,6 +395,8 @@ mov3[0].style.display='none'
                 localStorage.setItem('selectedMovieTitle', movie.title);
                 localStorage.setItem('selectedMovieOverview', movie.overview);
                 localStorage.setItem('selectedMoviePoster',moviePoster.src);
+                localStorage.setItem('selectedMovieRating', movie.vote_average );
+                localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
                 window.location.href = 'movie-details.html';
               };
           };
@@ -454,6 +452,8 @@ mov3[0].style.display='none'
                       localStorage.setItem('selectedMovieTitle', movie.title);
                       localStorage.setItem('selectedMovieOverview', movie.overview);
                       localStorage.setItem('selectedMoviePoster',moviePoster.src);
+                      localStorage.setItem('selectedMovieRating', movie.vote_average );
+                      localStorage.setItem('selectedMovieReleaseDate', movie.release_date);  
                       window.location.href = 'movie-details.html';
                     };
                 };
@@ -507,6 +507,8 @@ mov3[0].style.display='none'
                           localStorage.setItem('selectedMovieTitle', movie.title);
                           localStorage.setItem('selectedMovieOverview', movie.overview);
                           localStorage.setItem('selectedMoviePoster',moviePoster.src);
+                          localStorage.setItem('selectedMovieRating', movie.vote_average );
+                          localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
                           window.location.href = 'movie-details.html';
                         };
                     };
@@ -561,6 +563,8 @@ mov3[0].style.display='none'
                               localStorage.setItem('selectedMovieTitle', movie.title);
                               localStorage.setItem('selectedMovieOverview', movie.overview);
                               localStorage.setItem('selectedMoviePoster',moviePoster.src);
+                              localStorage.setItem('selectedMovieRating', movie.vote_average );
+                              localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
                               window.location.href = 'movie-details.html';
                             };
                         };
@@ -618,6 +622,8 @@ const apiUrl3 = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&
                                   localStorage.setItem('selectedMovieTitle', movie.title);
                                   localStorage.setItem('selectedMovieOverview', movie.overview);
                                   localStorage.setItem('selectedMoviePoster',moviePoster.src);
+                                  localStorage.setItem('selectedMovieRating', movie.vote_average );
+                                  localStorage.setItem('selectedMovieReleaseDate', movie.release_date);
                                   window.location.href = 'movie-details.html';
                                 };
                             };
