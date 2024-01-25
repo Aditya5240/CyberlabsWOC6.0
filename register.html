@@ -87,36 +87,7 @@
         }
 
         MainForm.addEventListener('submit', RegisterUser);
-
-        function createUserProfile(uid, email, fname, lname) {
-  const userRef = ref(db, `users/${uid}`);
-  set(userRef, {
-    email: email,
-    firstName: fname,
-    lastName: lname,
-    watchlist: []
-  });
-}
-
-createUserWithEmailAndPassword(auth, EmailInp.value, PassInp.value)
-  .then((credentials) => {
-    console.log(credentials);
-
-    // Create user profile in the database
-    createUserProfile(credentials.user.uid, EmailInp.value, FnameInp.value, LnameInp.value);
-
-    alert('user registered');
-    window.open("woc.html");
-  })
-  .catch((error) => {
-    alert(error.message);
-    console.error(error.code, error.message);
-  });
-
-
-        
-
-      </script>
+  </script>
       
   </body>
 </html>
